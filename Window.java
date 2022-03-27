@@ -4,7 +4,7 @@ import java.awt.event.*;
 public class Window extends Frame{
     Window(){
         setLayout(null);
-        setSize(700,700);
+        setSize(600,600);
         MyCanvas canvas = new MyCanvas();
         add(canvas);
         setVisible(true);

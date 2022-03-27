@@ -1,13 +1,15 @@
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 public class MyCanvas extends Canvas{
-    
+    Printer p;
     public MyCanvas(){
-        setSize(600,600);
+        setSize(800,800);
         setBackground(Color.GRAY);
+        p = new Printer(800, 800, new Point(550,400));
     }
     public void paint(Graphics g){
-        g.setColor(Color.RED);
-        g.drawOval(75, 75, 150, 75);
+        BufferedImage image = p.printImage(new Mandelbrot(300));
+        g.drawImage(image, 0, 0, null);
     }
 }
