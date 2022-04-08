@@ -21,7 +21,7 @@ public class Mandelbrot implements Shape{
         if(iter==1000)
             return Color.BLACK.getRGB();
         else if(z.abs()>=2.0)
-            return Color.getHSBColor(((float)iter)/((float)1000), (float)0.5, (float)0.5).getRGB();
+            return Color.getHSBColor(((float)iter)/((float)1000), (float)0.5, (float)0.7).getRGB();
         else return Color.WHITE.getRGB();
     }
     
